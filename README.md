@@ -10,4 +10,4 @@ Create a page like linktree that allows a person show their personal profile and
 - css
 
 ## Live link
-[visit](https://abelotegola-hng9profile_project.netlify.app/)
+[visit](https://abelotegola-hng9profileproject.netlify.app/)
