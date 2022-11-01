@@ -1,0 +1,32 @@
+.share {
+  position: absolute;
+  right: 20%;
+  top: 40px;
+}
+.share__icon,
+.option__icon {
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px dashed #999;
+  outline: 3px solid transparent;
+  cursor: pointer;
+}
+.share__icon:hover,
+.option__icon:hover {
+  outline: 3px solid rgb(230, 234, 240);
+  transition: 0.5s;
+}
+.option__icon {
+  display: none;
+}
+@media (max-width: 768px) {
+    .share {
+        right: 15px;
+    }
+    .share__icon {
+        display: none;
+    } 
+    .option__icon {
+        display: block;
+    }
+}

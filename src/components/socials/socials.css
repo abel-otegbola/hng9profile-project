@@ -1,0 +1,8 @@
+.socials {
+    display: flex;
+    justify-content: center;
+}
+.socials a {
+    padding: 20px;
+    margin: 15px 0;
+}
