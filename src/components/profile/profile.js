@@ -14,7 +14,7 @@ const Profile = () => {
             </div>
 
 
-            <h2 className="username__twitter" id="twitter">Abel Otegbola</h2>
+            <h2 className="username__twitter" id="twitter">Abel_Otegbola</h2>
 
             <h2 className="username__slack" id="slack">abelotegbola</h2>
 

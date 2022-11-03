@@ -1,0 +1,105 @@
+.contact {
+    width: 55%;
+    margin: auto;
+    margin-bottom: 10%;
+    text-align: left;
+}
+.contact p {
+    margin-bottom: 40px;
+}
+.fullname {
+    display: flex;
+    justify-content: space-between;
+}
+.fullname .inputField {
+    width: 48%;
+}
+.inputField {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+}
+.inputField label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.inputField input,
+.inputField textarea,
+.agreement input {
+    padding: 17px;
+    border: 1px solid #d0d5dd;
+    border-radius: 5px;
+    outline: 3px solid transparent;
+}
+.inputField input:hover,
+.inputField textarea:hover,
+.agreement input:hover {
+    border: 1px solid rgb(154, 198, 228);
+    transition: 0.7s;
+}
+.inputField input:focus,
+.inputField textarea:focus,
+.agreement input:focus,
+button:focus {
+    border: 1px solid rgb(154, 198, 228);
+    outline: 3px solid rgb(200, 231, 253);
+    transition: 0.7s;
+}
+.inputField.error input:hover,
+.inputField.error textarea:hover {
+    border: 1px solid rgb(251, 87, 87);
+    transition: 0.7s;
+}
+.inputField.error input:focus,
+.inputField.error textarea:focus {
+    outline: 3px solid rgb(244, 211, 211);
+    transition: 0.7s;
+}
+.inputField textarea {
+    height: 150px;
+}
+.inputField .err_msg {
+    color: rgb(251, 87, 87);
+    font-weight: 500;
+    margin: 5px 0;
+    padding: 0;
+}
+.agreement {
+    display: flex;
+    align-items: flex-start;
+}
+.agreement label {
+    font-weight: 400;
+    text-align: left;
+}
+.agreement input {
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    margin-right: 10px;
+}
+button {
+    margin: 20px 0;
+    padding: 17px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #1570ef;
+    color: #fff;
+    border: none;
+}
+button:hover {
+    background-color: #175cd3;
+}
+
+@media (max-width: 768px) {
+    .contact {
+        width: 92%;
+    }
+    .fullname {
+        flex-direction: column;
+    }
+    .fullname .inputField {
+        width: 100%;
+    }
+}
