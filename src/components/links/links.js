@@ -4,7 +4,7 @@ const Links = () => {
     return (
         <div className="links">
 
-            <a href="https://twitter.com/Abel_Otegbola" id="twitter_link" title="twitter_link">Twitter Link</a>
+            <a href="https://twitter.com/Abel_Otegbola" id="twitter" title="twitter_link">Twitter Link</a>
 
             <a href="https://training.zuri.team/" id="btn_zuri" title="btn_zuri">Zuri Team</a>
 
