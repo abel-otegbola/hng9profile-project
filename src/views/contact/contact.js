@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SuccessPopup from "../../components/popup/successPopup";
 import { validate } from "../../helpers/validate";
 import "./contact.css"
 
@@ -9,11 +10,17 @@ const Contact = () => {
     const [message, setMessage] = useState("")
     const [agreement, setAgreement] = useState(false)
     const [errMsg, setErrMsg] = useState({})
+    const [popup, setPopup] = useState("none")
 
 
     const handleValidation = (e) => {
         e.preventDefault()
-        setErrMsg(validate(firstname, lastname, email, message, agreement))
+        let getErr = {};
+        getErr = validate(firstname, lastname, email, message, agreement)
+        setErrMsg(getErr)
+        if(!getErr.fn_err && !getErr.ln_err && !getErr.email_err && !getErr.msg_err) {
+            setPopup("block")
+        }
     }
 
 
@@ -55,6 +62,10 @@ const Contact = () => {
             </div>
 
             <button type="submit" id="btn_submit" disabled={(agreement) ? false : true} onClick={(e) => handleValidation(e)}>Send message</button>
+
+            <div style={{ display: popup }}>
+                <SuccessPopup />
+            </div>
 
         </form>
     )
