@@ -88,6 +88,10 @@ button {
     color: #fff;
     border: none;
 }
+button:disabled,
+button:disabled:hover {
+    background-color: #b2ddff;
+}
 button:hover {
     background-color: #175cd3;
 }

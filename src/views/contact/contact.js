@@ -7,13 +7,13 @@ const Contact = () => {
     const [lastname, setLastname] = useState("")
     const [email, setEmail] = useState("")
     const [message, setMessage] = useState("")
+    const [agreement, setAgreement] = useState(false)
     const [errMsg, setErrMsg] = useState({})
 
 
     const handleValidation = (e) => {
         e.preventDefault()
-        setErrMsg(validate(firstname, lastname, email, message))
-        console.log(errMsg)
+        setErrMsg(validate(firstname, lastname, email, message, agreement))
     }
 
 
@@ -50,11 +50,11 @@ const Contact = () => {
             </div>
 
             <div className="agreement">
-                <input type="checkbox" id="agreement"/>
+                <input type="checkbox" id="agreement" onChange={(e) => setAgreement(e.target.checked)}/>
                 <label htmlFor="agreement">You agree to providing your data to Abel Otegbola who may contact you. </label>
             </div>
 
-            <button type="submit" id="btn_submit" onClick={(e) => handleValidation(e)}>Send message</button>
+            <button type="submit" id="btn_submit" disabled={(agreement) ? false : true} onClick={(e) => handleValidation(e)}>Send message</button>
 
         </form>
     )
